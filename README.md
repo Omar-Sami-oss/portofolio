@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Portfolio React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository is a personal portfolio built with React. It includes pages for Home, About, Projects, Blog (Dev.to integration), and Contact (Formspree). The UI is componentized under `src/components` and pages under `src/pages`.
 
-## Available Scripts
+**Key Features:**
+- Client-side routing with React Router
+- Blog list and detail pages fetched from the Dev.to API
+- Projects list fetched from GitHub
+- Contact form wired to Formspree
+- Random quote display using an external quote API
+- Refactored component files to `.jsx` for better JSX tooling
 
-In the project directory, you can run:
+Getting started
+---------------
 
-### `npm start`
+Prerequisites:
+- Node.js (16+) and npm installed
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Install dependencies:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+npm install
+```
 
-### `npm test`
+Run development server:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm start
+```
 
-### `npm run build`
+Open http://localhost:3000 to view the app.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Build for production:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npm run build
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Environment configuration
+-------------------------
+This app reads a few optional environment variables (place in a `.env` file at the project root):
 
-### `npm run eject`
+- `REACT_APP_FORMSPREE_ENDPOINT` — Formspree form endpoint for contact submissions
+- `REACT_APP_GITHUB_USERNAME` — GitHub username used to fetch public repos for the Projects page
+- `REACT_APP_DEVTO_USERNAME` — Dev.to username used to fetch posts (if applicable)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+If you don't provide them, the app uses sensible defaults or static placeholders.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Project structure
+-----------------
+- `public/` — static assets and `index.html`
+- `src/` — React source
+	- `components/` — shared UI components
+	- `pages/` — route pages (Home, About, Projects, Blog, Contact)
+	- `App.js` — router and app shell
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Notes about recent changes
+-------------------------
+- The codebase was recently refactored: React components and pages were copied to `.jsx` files for improved editor support. Originals with `.js` extensions are still present and pending deletion once you've verified `.jsx` files work in your environment.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Next steps you may want to run
+----------------------------
+- Delete original `.js` files after confirming `.jsx` copies work.
+- Run `npm run build` and deploy the `build/` directory to your static host of choice (Netlify, Vercel, GitHub Pages, etc.).
 
-## Learn More
+Contributing
+------------
+PRs and issues are welcome — keep changes focused and test the build before submitting.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+License
+-------
+This project is provided without an explicit license. Add a `LICENSE` file if you intend to make it open-source.
