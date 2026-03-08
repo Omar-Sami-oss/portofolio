@@ -40,7 +40,14 @@
   text-decoration: underline;
 }
 
+.nav-toggle {
+  display: none;
+}
+
 @media (max-width: 700px) {
+  .nav-toggle {
+    display: inline-flex;
+  }
   .nav {
     padding: 0 1rem;
   }
