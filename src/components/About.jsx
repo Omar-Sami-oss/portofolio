@@ -13,8 +13,7 @@ function About() {
           <img src={avatar} alt="avatar" className="about-avatar" />
           <h2>About Me</h2>
           <p>
-            I'm a web developer focused on building accessible, performant, and
-            delightful user experiences using React and modern JavaScript.
+            I'm a web developer passionate about creating beautiful and functional websites. I have experience with React, JavaScript, and responsive design. I enjoy collaborating on projects and learning new technologies to improve my skills.
           </p>
           <div className="social-row">
             <a className="social-link" href="https://github.com/omar-sami-oss" target="_blank" rel="noopener noreferrer">
