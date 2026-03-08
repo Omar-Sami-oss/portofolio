@@ -31,22 +31,25 @@ function Projects() {
         {!loading && !error && (
           <div className="projects-grid">
             {repos.length === 0 && <p>No public projects found.</p>}
-            {repos.map(repo => (
-              <div key={repo.id} className="project-card">
-                <h3>{repo.name}</h3>
-                <p>{repo.description || 'No description provided.'}</p>
-                <div className="project-meta">
-                  <span>{repo.language || '—'}</span>
-                  <span>★ {repo.stargazers_count}</span>
+            {repos
+              .filter(repo => repo.name !== 'Omar-Sami-oss')
+              .map(repo => (
+                <div key={repo.id} className="project-card">
+                  <h3>{repo.name}</h3>
+                  <p>{repo.description || 'No description provided.'}</p>
+                  <div className="project-meta">
+                    <span className='language'>{repo.language}</span>
+                    {/* <span>★ {repo.stargazers_count}</span> */}
+                  </div>
+                  <a className="project-link" href={repo.html_url} target="_blank" rel="noopener noreferrer">View on GitHub</a>
                 </div>
-                <a className="project-link" href={repo.html_url} target="_blank" rel="noopener noreferrer">View on GitHub</a>
-              </div>
-            ))}
+              ))}
           </div>
         )}
       </div>
     </section>
   );
 }
+
 
 export default Projects;

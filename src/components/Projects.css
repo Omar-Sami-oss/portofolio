@@ -25,3 +25,18 @@
 .project-card h3 {
   margin-bottom: 1rem;
 }
+
+@media (max-width: 600px) {
+  .projects {
+    padding: 2.5rem 0;
+  }
+  .projects h2 {
+    font-size: 1.75rem;
+  }
+  .language {
+    text-align: center;
+  }
+  a{
+    text-align: center;
+  }
+}

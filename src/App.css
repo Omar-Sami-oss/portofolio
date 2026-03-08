@@ -9,3 +9,32 @@ body {
   line-height: 1.6;
   color: #333;
 }
+
+/* Responsive helpers */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Make buttons and form elements adapt */
+.btn {
+  display: inline-block;
+  text-align: center;
+}
+
+input, textarea, select, button {
+  max-width: 100%;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 15px;
+  }
+}

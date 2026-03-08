@@ -7,7 +7,7 @@ function Hero() {
     <section className="hero">
       <div className="hero-content">
         <h1>Hello, my name is Omar Sami</h1>
-        <p>I'm a web developer passionate about creating amazing user experiences.</p>
+        <p>I'm a web developer passionate about creating beautiful and functional websites. I have experience with React, JavaScript, and responsive design. I enjoy collaborating on projects and learning new technologies to improve my skills.</p>
         <Link to="/about" className="btn">Learn More</Link>
       </div>
     </section>

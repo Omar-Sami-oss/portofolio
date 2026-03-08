@@ -1,7 +1,7 @@
 .about {
   padding: 4rem 0;
   background-color: #f4f7fb;
-  height: 100vh;
+  min-height: 60vh;
 }
 
 .container {
@@ -92,5 +92,44 @@
   }
   .about-card {
     text-align: left;
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    padding: 2.5rem 0;
+  }
+  .about-avatar {
+    width: 96px;
+    height: 96px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .about-card {
+    padding: 1rem;
+  }
+  .about-details p {
+    font-size: 0.95rem;
+  }
+  h2 {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+  p {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+  h3{
+    font-size: 1rem;
+    text-align: center;
+  }
+   .skills {
+    justify-content: center;
+  }
+  .contact-btn {
+    display: block;
+    width: 100%;
+    margin-top: 1.5rem;
+    text-align: center;
   }
 }
