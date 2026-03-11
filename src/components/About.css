@@ -1,6 +1,6 @@
 .about {
   padding: 4rem 0;
-  background-color: #f4f7fb;
+  background-color: var(--section-bg);
   min-height: 60vh;
 }
 
@@ -18,11 +18,14 @@
 }
 
 .about-card {
-  background: linear-gradient(180deg, #ffffff, #f8fbff);
+  background: var(--card-bg);
   padding: 1.5rem;
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 6px 24px rgba(20,30,60,0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .about-avatar {
@@ -31,7 +34,7 @@
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 1rem;
-  background: #fff;
+  background: var(--card-bg);
   padding: 12px;
 }
 
@@ -64,7 +67,7 @@
 }
 
 .about-details p {
-  color: #334155;
+  color: var(--muted);
   line-height: 1.7;
 }
 
@@ -78,8 +81,8 @@
 }
 
 .skills li {
-  background: #eef2ff;
-  color: #3730a3;
+  background: var(--card-bg);
+  color: var(--text);
   padding: 0.4rem 0.75rem;
   border-radius: 999px;
   font-weight: 600;

@@ -38,3 +38,48 @@ input, textarea, select, button {
     font-size: 15px;
   }
 }
+
+/* Theme variables (light by default) */
+:root {
+  --bg: #f4f7fb;
+  --text: #111827;
+  --muted: #6b7280;
+  --header-bg: #111827;
+  --primary: #667eea;
+  --primary-dark: #5a67d8;
+  --card-bg: #ffffff;
+  --section-bg: #f4f7fb;
+  --hero-text: #ffffff;
+  --gradient-start: #ecc930;
+  --gradient-end: #89b45d ;
+}
+
+/* Dark theme */
+:root[data-theme='dark'], [data-theme='dark'] {
+  --bg: #07142b;
+  --text: #e6eef8;
+  --muted: #9aa6bf;
+  --header-bg: #061225;
+  --primary: #60a5fa;
+  --primary-dark: #3b82f6;
+  --card-bg: #071125;
+  --section-bg: #07142b;
+  --hero-text: #e6eef8;
+  --gradient-start: #667eea;
+  --gradient-end: #764ba2;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.btn {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* Smooth fade when switching themes */
+html.theme-transition, html.theme-transition * {
+  transition: background-color 260ms ease, color 260ms ease, border-color 260ms ease, box-shadow 260ms ease, fill 260ms ease;
+}

@@ -1,11 +1,54 @@
 .hero {
-  min-height: 90vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: white;
+  color: var(--hero-text);
+}
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+/* stacked gradients for smooth crossfade between themes */
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  transition: opacity 300ms ease;
+  will-change: opacity;
+}
+
+/* light gradient */
+.hero::before {
+  background: linear-gradient(135deg, #ecc930 0%, #89b45d 100%);
+  opacity: 1;
+}
+
+/* dark gradient */
+.hero::after {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  opacity: 0;
+}
+
+/* ensure hero content sits above gradients */
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* when dark theme is active, crossfade */
+:root[data-theme='dark'] .hero::before,
+[data-theme='dark'] .hero::before {
+  opacity: 0;
+}
+:root[data-theme='dark'] .hero::after,
+[data-theme='dark'] .hero::after {
+  opacity: 1;
 }
 
 .hero-content h1 {

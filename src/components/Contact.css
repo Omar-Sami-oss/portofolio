@@ -1,6 +1,6 @@
 .contact {
   padding: 4rem 0;
-  background-color: #f4f4f4;
+  background-color: var(--section-bg);
   min-height: 100vh;
 }
 
@@ -8,6 +8,7 @@
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 2rem;
+  color: var(--text);
 }
 
 .contact-form {
@@ -34,8 +35,10 @@
 .contact-form input,
 .contact-form textarea {
   padding: 0.75rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--muted);
   border-radius: 5px;
+  background-color: var(--card-bg);
+  color: var(--text);
 }
 
 .contact-form textarea {
